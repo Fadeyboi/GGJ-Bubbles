@@ -1,18 +1,22 @@
 using UnityEngine;
+using TMPro;
 
 public class Bubble : MonoBehaviour
 {
-    public float swayAmplitude = 0.2f;  // Reduced amplitude for X movement
-    public float swaySpeed = 5f;        // Speed for X-axis sway
-    public float gravityForce = 1f;    // Simulated gravity effect
+    public float swayAmplitude = 0.2f;
+    public float swaySpeed = 5f;
+    public float gravityForce = 1f; 
     private float initialX;
-    private float verticalSpeed = 0f;  // Bubble's vertical velocity
-
+    private float verticalSpeed = 0f; 
     public float speedFactor = 0.5f;
+    string[] types = { "Apple", "Orange", "Green", "Yellow" };
+    public string bubbleType;
 
     void Start()
     {
         SpawnObjectRandomly();
+        bubbleType = types[Random.Range(0, types.Length)];
+        Debug.Log($"Assigned type: {bubbleType}");
     }
 
     void Update()
@@ -49,4 +53,18 @@ public class Bubble : MonoBehaviour
 
         transform.position = new Vector3(newX, newY, transform.position.z);
     }
+
+    void OnTriggerEnter2D(Collider2D other)
+{
+    if (other.CompareTag("Spike"))
+    {
+        Spike spike = other.GetComponent<Spike>();
+        if (spike != null && spike.spikeType == bubbleType)
+        {
+            GameManager.Instance.AddScore(1);
+        }
+        Destroy(gameObject);
+    }
+}
+
 }

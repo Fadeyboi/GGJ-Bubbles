@@ -102,7 +102,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8224e0122c046413b812bd92ac9c7fde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectToSpawn: {fileID: 5704834659416698887}
+  swayAmplitude: 0.2
+  swaySpeed: 5
+  gravityForce: 1
+  speedFactor: 0.5
+  bubbleType: 
+  score: 0
+  scoreText: {fileID: 7815324572162098536, guid: c6c68bc0aa6c94a918ea628225a1e040, type: 3}
 --- !u!50 &5327166694587839786
 Rigidbody2D:
   serializedVersion: 5
