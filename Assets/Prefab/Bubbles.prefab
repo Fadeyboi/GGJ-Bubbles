@@ -111,6 +111,11 @@ MonoBehaviour:
   cherrySprite: {fileID: -4570538037665054336, guid: 3d6be91968cb95546ac95aeff5e52f84, type: 3}
   melonSprite: {fileID: 3776312371561069292, guid: 031678d507e557a41b7a16fc33bf6c39, type: 3}
   bananaSprite: {fileID: -5728686177044832811, guid: b1f24b3bc2e2f1d4b858657ad5c115a0, type: 3}
+  popSounds:
+  - {fileID: 8300000, guid: 79783bf0dfa56a54b8447dcded53295b, type: 3}
+  - {fileID: 8300000, guid: 3647491263c4b974e8ac551029bcdac8, type: 3}
+  - {fileID: 8300000, guid: a66dc2c7b68334545b32dd0ff3d59505, type: 3}
+  popEffect: {fileID: 4148412240511848556, guid: 63ac06837c375b24a8ffb646fa887894, type: 3}
 --- !u!50 &5327166694587839786
 Rigidbody2D:
   serializedVersion: 5

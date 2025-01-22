@@ -19,6 +19,12 @@ public class Bubble : MonoBehaviour
     public Sprite melonSprite;
     public Sprite bananaSprite;
 
+    // 1) Add your pop sound
+    public AudioClip[] popSounds;
+
+
+    public GameObject popEffect;  // <-- Add this
+
     void Start()
     {
         SpawnObjectRandomly();
@@ -26,6 +32,7 @@ public class Bubble : MonoBehaviour
         Debug.Log($"Assigned type: {bubbleType}");
 
         AddSpriteToBubble();
+        
     }
 
     void Update()
@@ -102,13 +109,31 @@ public class Bubble : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
         Debug.Log("test");
+
+        Spike spike = other.GetComponent<Spike>();
+        if (spike != null && spike.spikeType == bubbleType)
         {
-            Spike spike = other.GetComponent<Spike>();
-            if (spike != null && spike.spikeType == bubbleType)
-            {
-                GameManager.Instance.AddScore(1);
-            }
-            Destroy(gameObject);
+            GameManager.Instance.AddScore(1);
+
+            
+            
         }
+        if (popSounds != null && popSounds.Length > 0)
+        {
+            // Pick a random index from 0 up to popSounds.Length (exclusive upper bound)
+            int randomIndex = Random.Range(0, popSounds.Length);
+            AudioClip randomClip = popSounds[randomIndex];
+
+            // Play the chosen random clip
+            AudioSource.PlayClipAtPoint(randomClip, transform.position, 1.0f);
+        }
+
+        if (popEffect != null)
+        {
+            Instantiate(popEffect, transform.position, Quaternion.identity);
+        }
+
+        Destroy(gameObject);
     }
+
 }
