@@ -9,7 +9,7 @@ public class Bubble : MonoBehaviour
     private float initialX;
     private float verticalSpeed = 0f; 
     public float speedFactor = 0.5f;
-    string[] types = { "Apple", "Orange", "Green", "Yellow" };
+    string[] types = { "Apple", "Cherry", "Melon", "Banana" };
     public string bubbleType;
 
     void Start()
@@ -48,7 +48,7 @@ public class Bubble : MonoBehaviour
         float newX = initialX + Mathf.Sin(Time.time * swaySpeed) * swayAmplitude;
 
         // Simulate gravity-like effect for Y-axis
-        verticalSpeed -= (gravityForce * speedFactor) * Time.deltaTime;
+        verticalSpeed -= speedFactor * Time.deltaTime;
         float newY = transform.position.y + verticalSpeed * Time.deltaTime;
 
         transform.position = new Vector3(newX, newY, transform.position.z);
@@ -56,6 +56,7 @@ public class Bubble : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
 {
+    Debug.Log("test");
     if (other.CompareTag("Spike"))
     {
         Spike spike = other.GetComponent<Spike>();
