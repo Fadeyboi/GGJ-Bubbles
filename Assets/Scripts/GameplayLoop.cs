@@ -4,7 +4,7 @@ public class GameplayLoop : MonoBehaviour
 {
     public GameObject bubble;
     float timeToSpawn = 5f;
-    float reduceTimeToSpawn = 0.2f;
+    float reduceTimeToSpawn = 0.4f;
     float spawnTimeLimit = 1f;
     private float nextSpawnTime = 0f;
     void Start()
