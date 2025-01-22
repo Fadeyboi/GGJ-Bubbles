@@ -17,10 +17,18 @@ public class GameplayLoop : MonoBehaviour
         
         if (Time.time >= nextSpawnTime)
         {
-            if (Bubble.BubbleSpawnCount % 1 == 0 && GameManager.Score != 0){
-                SpawnBubble(true);
+            if (Bubble.BubbleSpawnCount % 5 == 0 && GameManager.Score != 0){
+                int prop = Random.Range(0, 2);
+                if (prop == 0)
+                {
+                    SpawnBubble(false, true);
+                }
+                else if (prop == 1)
+                {
+                    SpawnBubble(true, false);
+                }
             } else {
-                SpawnBubble(false);
+                SpawnBubble(false, false);
             }
             
             timeToSpawn = Mathf.Max(timeToSpawn - reduceTimeToSpawn, spawnTimeLimit);
@@ -28,7 +36,7 @@ public class GameplayLoop : MonoBehaviour
         }
     }
 
-    void SpawnBubble(bool teleporting)
+    void SpawnBubble(bool teleporting, bool randomizing)
 {
     // Instantiate the bubble
     GameObject newBubble = Instantiate(bubble, new Vector3(70, 70, 0), Quaternion.identity);
@@ -38,7 +46,9 @@ public class GameplayLoop : MonoBehaviour
     Bubble bubbleScript = newBubble.GetComponent<Bubble>();
     if (bubbleScript != null)
     {
-        bubbleScript.isTeleportBubble = teleporting;
+            bubbleScript.isTeleportBubble = teleporting;
+            bubbleScript.isRandomizedBubble = randomizing;
+
     }
     else
     {

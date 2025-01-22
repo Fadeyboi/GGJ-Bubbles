@@ -20,6 +20,15 @@ public class Bubble : MonoBehaviour
     public bool teleportedBefore = false;
     public float teleportThreshold = 1f;
     private bool isFrozen = false;
+
+     
+
+    private SpriteRenderer spriteRenderer;
+    public bool isRandomizedBubble = false;
+    public float RandomizedThreshold = 1f; 
+
+
+
     public static int BubbleSpawnCount { get; private set; }
 
     void Start()
@@ -43,6 +52,11 @@ public class Bubble : MonoBehaviour
         if (isTeleportBubble && transform.position.y <= teleportThreshold)
         {
             TeleportToNewColumn();
+        }
+
+        if (isRandomizedBubble)
+        {
+            StartCoroutine(RandomizeSprite());
         }
     }
 
@@ -84,9 +98,22 @@ public class Bubble : MonoBehaviour
         spriteObject.transform.SetParent(this.transform);
 
         // Add a SpriteRenderer to the child object
-        SpriteRenderer spriteRenderer = spriteObject.AddComponent<SpriteRenderer>();
+        spriteRenderer = spriteObject.AddComponent<SpriteRenderer>();
 
         // Assign the sprite based on the bubble type
+        UpdateSprite();
+
+        // Adjust the sprite's position relative to the bubble
+        spriteObject.transform.localPosition = Vector3.zero;
+        spriteObject.transform.localScale = new Vector3(3f, 3f, 1f); // Adjust scale if needed
+
+        // Set the sorting order
+        spriteRenderer.sortingOrder = 1;
+    }
+
+
+    void UpdateSprite()
+    {
         switch (bubbleType)
         {
             case "Apple":
@@ -102,16 +129,19 @@ public class Bubble : MonoBehaviour
                 spriteRenderer.sprite = bananaSprite;
                 break;
         }
-
-        // Adjust the sprite's position relative to the bubble
-        spriteObject.transform.localPosition = Vector3.zero;
-        spriteObject.transform.localScale = new Vector3(3f, 3f, 1f); // Adjust scale if needed
-
-        // Set the sorting order
-        spriteRenderer.sortingOrder = 1;
     }
 
-void TeleportToNewColumn()
+    IEnumerator RandomizeSprite()
+    {
+        while (transform.position.y > RandomizedThreshold)
+        {
+            bubbleType = types[Random.Range(0, types.Length)];
+            UpdateSprite();
+            yield return new WaitForSeconds(1f); // Change sprite every second
+        }
+    }
+
+    void TeleportToNewColumn()
     {
         if (teleportedBefore)
         {
