@@ -2,16 +2,22 @@ using UnityEngine;
 
 public class Spike : MonoBehaviour
 {
-    string[] types = { "Apple", "Orange", "Green", "Yellow" };
     public string spikeType;
+
     void Start()
     {
-        spikeType = "Apple";
-    }
+        // Get the parent's SquareLabel component
+        SquareLabel parentLabel = GetComponentInParent<SquareLabel>();
 
-    // Update is called once per frame
-    void Update()
-    {
-
+        if (parentLabel != null)
+        {
+            // Set the spike's type to match the parent's label
+            spikeType = parentLabel.label;
+            Debug.Log($"Spike type set to: {spikeType}");
+        }
+        else
+        {
+            Debug.LogError("Parent does not have a SquareLabel component.");
+        }
     }
 }
