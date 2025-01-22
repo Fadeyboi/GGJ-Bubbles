@@ -17,7 +17,7 @@ public class GameplayLoop : MonoBehaviour
         
         if (Time.time >= nextSpawnTime)
         {
-            if (Bubble.BubbleSpawnCount % 1 == 0 && GameManager.Score != 0){
+            if (Bubble.BubbleSpawnCount % 5 == 0 && GameManager.Score != 0){
                 SpawnBubble(true);
             } else {
                 SpawnBubble(false);
