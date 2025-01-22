@@ -48,6 +48,10 @@ public class SpawnPlayer : MonoBehaviour
 
     void Update()
     {
+        if (PauseManager.GlobalIsPaused || GameManager.GlobalGameEnded)
+        {
+            return;
+        }
         if (Input.GetKeyDown(KeyCode.D))
         {
             ShiftRight();

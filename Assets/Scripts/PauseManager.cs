@@ -5,6 +5,7 @@ public class PauseManager : MonoBehaviour
 {
     private bool isPaused = false;
     public GameObject pauseText;
+    public static bool GlobalIsPaused { get; private set; }
 
     void Start()
     {
@@ -17,6 +18,10 @@ public class PauseManager : MonoBehaviour
 
     void Update()
     {
+        if (GameManager.GlobalGameEnded)
+        {
+            return;
+        }
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             TogglePause();
@@ -31,7 +36,7 @@ public class PauseManager : MonoBehaviour
     public void TogglePause()
     {
         isPaused = !isPaused;
-
+        GlobalIsPaused = isPaused;
         if (isPaused)
         {
             PauseGame();
@@ -70,5 +75,6 @@ public class PauseManager : MonoBehaviour
 
     void QuitToMainmenu(){
         Debug.Log("Quitting to main menu");
+        //SceneManager.LoadScene("Main Menu");
     }
 }
