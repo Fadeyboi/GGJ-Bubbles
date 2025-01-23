@@ -731,7 +731,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -963,7 +963,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4316985684733616043, guid: c6c68bc0aa6c94a918ea628225a1e040, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 31.7515
+      value: 27.684
       objectReference: {fileID: 0}
     - target: {fileID: 4316985684733616043, guid: c6c68bc0aa6c94a918ea628225a1e040, type: 3}
       propertyPath: m_LocalPosition.x
@@ -999,7 +999,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4316985684733616043, guid: c6c68bc0aa6c94a918ea628225a1e040, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -15.876
+      value: -13.842
       objectReference: {fileID: 0}
     - target: {fileID: 4316985684733616043, guid: c6c68bc0aa6c94a918ea628225a1e040, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1016,6 +1016,14 @@ PrefabInstance:
     - target: {fileID: 4335850164434100704, guid: c6c68bc0aa6c94a918ea628225a1e040, type: 3}
       propertyPath: m_Name
       value: Score
+      objectReference: {fileID: 0}
+    - target: {fileID: 7815324572162098536, guid: c6c68bc0aa6c94a918ea628225a1e040, type: 3}
+      propertyPath: m_fontSize
+      value: 27.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 7815324572162098536, guid: c6c68bc0aa6c94a918ea628225a1e040, type: 3}
+      propertyPath: m_enableAutoSizing
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
