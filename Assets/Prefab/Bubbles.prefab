@@ -113,6 +113,11 @@ MonoBehaviour:
   isTeleportBubble: 0
   teleportedBefore: 0
   teleportThreshold: 1
+  popSounds:
+  - {fileID: 8300000, guid: 79783bf0dfa56a54b8447dcded53295b, type: 3}
+  - {fileID: 8300000, guid: 3647491263c4b974e8ac551029bcdac8, type: 3}
+  - {fileID: 8300000, guid: a66dc2c7b68334545b32dd0ff3d59505, type: 3}
+  popEffect: {fileID: 4148412240511848556, guid: 63ac06837c375b24a8ffb646fa887894, type: 3}
 --- !u!50 &5327166694587839786
 Rigidbody2D:
   serializedVersion: 5

@@ -22,6 +22,12 @@ public class Bubble : MonoBehaviour
     private bool isFrozen = false;
     public static int BubbleSpawnCount { get; private set; }
 
+    // 1) Add your pop sound
+    public AudioClip[] popSounds;
+
+
+    public GameObject popEffect;  // <-- Add this
+
     void Start()
     {
         speedFactor = -1.8f;
@@ -31,6 +37,7 @@ public class Bubble : MonoBehaviour
         bubbleType = types[Random.Range(0, types.Length)];
         Debug.Log($"Assigned type: {bubbleType}");
         AddSpriteToBubble();
+        
     }
 
     void Update()
@@ -170,6 +177,19 @@ void TeleportToNewColumn()
         if (spike != null && spike.spikeType == bubbleType)
         {
             GameManager.Instance.AddScore(1);
+            if (popSounds != null && popSounds.Length > 0)
+        {
+            // Pick a random index from 0 up to popSounds.Length (exclusive upper bound)
+            int randomIndex = Random.Range(0, popSounds.Length);
+            AudioClip randomClip = popSounds[randomIndex];
+
+            // Play the chosen random clip
+            AudioSource.PlayClipAtPoint(randomClip, transform.position, 1.0f);
+        }
+        if (popEffect != null)
+        {
+            Instantiate(popEffect, transform.position, Quaternion.identity);
+        }
         }
         else
         {

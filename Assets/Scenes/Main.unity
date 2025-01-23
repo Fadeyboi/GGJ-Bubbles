@@ -435,6 +435,7 @@ GameObject:
   - component: {fileID: 918955364}
   - component: {fileID: 918955365}
   - component: {fileID: 918955366}
+  - component: {fileID: 918955367}
   m_Layer: 0
   m_Name: Gameplay Loop
   m_TagString: Untagged
@@ -515,6 +516,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseText: {fileID: 936609551}
+--- !u!114 &918955367
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 918955361}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a4bbac0e5ea8624f930d07d6c607bc6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  musicClip: {fileID: 8300000, guid: f44fa1d5452130248b89bd0ab7d5558b, type: 3}
 --- !u!1 &936609551
 GameObject:
   m_ObjectHideFlags: 0
