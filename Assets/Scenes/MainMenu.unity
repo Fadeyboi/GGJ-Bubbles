@@ -628,9 +628,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 551259856309546211, guid: a5c201a557d4d437ca5fe6e338d39b56, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -227
+      objectReference: {fileID: 0}
     - target: {fileID: 1154444237721756577, guid: a5c201a557d4d437ca5fe6e338d39b56, type: 3}
       propertyPath: m_text
       value: How To Play/Story
+      objectReference: {fileID: 0}
+    - target: {fileID: 3270798095286397128, guid: a5c201a557d4d437ca5fe6e338d39b56, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4406508927432852758, guid: a5c201a557d4d437ca5fe6e338d39b56, type: 3}
       propertyPath: m_SizeDelta.x
@@ -651,6 +659,17 @@ PrefabInstance:
     - target: {fileID: 4800124136922930115, guid: a5c201a557d4d437ca5fe6e338d39b56, type: 3}
       propertyPath: m_Name
       value: Main Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 5116726702038559884, guid: a5c201a557d4d437ca5fe6e338d39b56, type: 3}
+      propertyPath: m_text
+      value: '"Press A to move the baskets to the left and D to move them to the
+        right. Press ESC or Space to pause"
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6711309684864068733, guid: a5c201a557d4d437ca5fe6e338d39b56, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 25.000004
       objectReference: {fileID: 0}
     - target: {fileID: 8327240332145024042, guid: a5c201a557d4d437ca5fe6e338d39b56, type: 3}
       propertyPath: m_Pivot.x

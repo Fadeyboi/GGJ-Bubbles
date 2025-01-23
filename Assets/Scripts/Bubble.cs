@@ -29,7 +29,7 @@ public class Bubble : MonoBehaviour
 
 
 
-    public static int BubbleSpawnCount { get; private set; }
+    public static int BubbleSpawnCount { get; private set; } = 0;
 
     // 1) Add your pop sound
     public AudioClip[] popSounds;
@@ -46,7 +46,6 @@ public class Bubble : MonoBehaviour
         swaySpeed = 5f;
         swayAmplitude = 0.2f;
         RandomizedThreshold = 1f; 
-        BubbleSpawnCount = 0;
         SpawnObjectRandomly();
         bubbleType = types[Random.Range(0, types.Length)];
         Debug.Log($"Assigned type: {bubbleType}");
