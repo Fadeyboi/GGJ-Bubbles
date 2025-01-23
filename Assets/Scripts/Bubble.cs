@@ -46,6 +46,7 @@ public class Bubble : MonoBehaviour
         swaySpeed = 5f;
         swayAmplitude = 0.2f;
         RandomizedThreshold = 1f; 
+        BubbleSpawnCount = 0;
         SpawnObjectRandomly();
         bubbleType = types[Random.Range(0, types.Length)];
         Debug.Log($"Assigned type: {bubbleType}");
