@@ -132,7 +132,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 500
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -822,7 +822,35 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      10601881_42112-removebg-preview_0: -7413478961763690648
+      10601881_42112-removebg-preview_1: 1138040619406787121
+      10601881_42112-removebg-preview_10: 3777872087161498858
+      10601881_42112-removebg-preview_11: 8312028320682802866
+      10601881_42112-removebg-preview_12: -2762787446420986706
+      10601881_42112-removebg-preview_13: -2398543243379311041
+      10601881_42112-removebg-preview_14: -3920023727627857130
+      10601881_42112-removebg-preview_15: -5083226363717546101
+      10601881_42112-removebg-preview_16: -6988280532001888553
+      10601881_42112-removebg-preview_17: -3415656795389943076
+      10601881_42112-removebg-preview_18: 1254108815478886778
+      10601881_42112-removebg-preview_19: -8106763546416221602
+      10601881_42112-removebg-preview_2: 8542735845077679795
+      10601881_42112-removebg-preview_20: -994465043987832181
+      10601881_42112-removebg-preview_21: 8246365301818363833
+      10601881_42112-removebg-preview_22: -527155003647794007
+      10601881_42112-removebg-preview_23: -2645656159426154951
+      10601881_42112-removebg-preview_24: -7310237159726580803
+      10601881_42112-removebg-preview_25: -385940093774858328
+      10601881_42112-removebg-preview_26: -2375300378935850005
+      10601881_42112-removebg-preview_27: 6336935371100324558
+      10601881_42112-removebg-preview_3: -840331900153316462
+      10601881_42112-removebg-preview_4: -3931077733889127633
+      10601881_42112-removebg-preview_5: 7764105358643908730
+      10601881_42112-removebg-preview_6: -691051392659758373
+      10601881_42112-removebg-preview_7: 8859372224273173636
+      10601881_42112-removebg-preview_8: 5627329455609911784
+      10601881_42112-removebg-preview_9: 6145693626090163719
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
