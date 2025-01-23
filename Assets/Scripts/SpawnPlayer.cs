@@ -11,7 +11,9 @@ public class SpawnPlayer : MonoBehaviour
     public Sprite cherrySprite;
     public Sprite melonSprite;
     public Sprite bananaSprite;
+    public AudioClip moveSoundEffect;
 
+    public AudioSource audioSource; // To play the sound
     private GameObject[] squares;    // Holds the 4 squares
     private float columnWidth;       // Distance between columns
     private float bottomY;           // Y-position where squares sit
@@ -54,13 +56,34 @@ public class SpawnPlayer : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow))
         {
+            PlayMoveSound(); // Play sound effect
+
             ShiftRight();
         }
         else if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow))
         {
+
+            PlayMoveSound(); // Play sound effeect
             ShiftLeft();
+            
         }
     }
+
+
+    void PlayMoveSound()
+    {
+        if (audioSource != null && moveSoundEffect != null)
+        {
+            // Use PlayOneShot to play the sound without affecting other clips
+            audioSource.PlayOneShot(moveSoundEffect);
+        }
+        else
+        {
+            Debug.LogWarning("AudioSource or moveSoundEffect is not assigned!");
+        }
+    }
+
+
 
     void SpawnSquares()
     {
