@@ -106,10 +106,10 @@ MonoBehaviour:
   swaySpeed: 5
   speedFactor: 0.5
   bubbleType: 
-  appleSprite: {fileID: -7413478961763690648, guid: 14d29f19e06df4bde95326899bd0472d, type: 3}
-  cherrySprite: {fileID: 8859372224273173636, guid: 14d29f19e06df4bde95326899bd0472d, type: 3}
-  melonSprite: {fileID: 5627329455609911784, guid: 14d29f19e06df4bde95326899bd0472d, type: 3}
-  bananaSprite: {fileID: 6145693626090163719, guid: 14d29f19e06df4bde95326899bd0472d, type: 3}
+  appleSprite: {fileID: -2072066215349300551, guid: ab2608b43a34445fbac4daf89a58198f, type: 3}
+  cherrySprite: {fileID: -5847515952828923643, guid: ab2608b43a34445fbac4daf89a58198f, type: 3}
+  melonSprite: {fileID: -6387613316599111789, guid: ab2608b43a34445fbac4daf89a58198f, type: 3}
+  bananaSprite: {fileID: -8606478049137719573, guid: ab2608b43a34445fbac4daf89a58198f, type: 3}
   isTeleportBubble: 0
   teleportedBefore: 0
   teleportThreshold: 1
