@@ -7,9 +7,17 @@ AssetOrigin:
   packageVersion: 1.0.0
   assetPath: Assets/CatlandsGames/9FreeBackgrounds/BackgroundsPNG/Background4.png
   uploadId: 664641
+AssetOrigin:
+  serializedVersion: 1
+  productId: 285183
+  packageName: 9 Free Backgrounds
+  packageVersion: 1.0.0
+  assetPath: Assets/CatlandsGames/9FreeBackgrounds/BackgroundsPNG/Background4.png
+  uploadId: 664641
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
+  serializedVersion: 13
   serializedVersion: 13
   mipmaps:
     mipMapMode: 0
@@ -32,6 +40,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMipmapLimit: 0
   ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
@@ -72,8 +81,10 @@ TextureImporter:
   ignorePngGamma: 0
   applyGammaDecoding: 0
   swizzle: 50462976
+  swizzle: 50462976
   cookieLightType: 0
   platformSettings:
+  - serializedVersion: 4
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
@@ -85,8 +96,10 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     ignorePlatformSupport: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
   - serializedVersion: 4
     buildTarget: Standalone
     maxTextureSize: 2048
@@ -118,6 +131,7 @@ TextureImporter:
     sprites: []
     outline: []
     customData: 
+    customData: 
     physicsShape: []
     bones: []
     spriteID: 5e97eb03825dee720800000000000000
@@ -129,7 +143,10 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
+    spriteCustomMetadata:
+      entries: []
     nameFileIdTable: {}
+  mipmapLimitGroupName: 
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
