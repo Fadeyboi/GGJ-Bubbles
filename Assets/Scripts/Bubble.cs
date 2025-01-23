@@ -178,18 +178,18 @@ void TeleportToNewColumn()
         {
             GameManager.Instance.AddScore(1);
             if (popSounds != null && popSounds.Length > 0)
-        {
-            // Pick a random index from 0 up to popSounds.Length (exclusive upper bound)
-            int randomIndex = Random.Range(0, popSounds.Length);
-            AudioClip randomClip = popSounds[randomIndex];
+            {
+                // Pick a random index from 0 up to popSounds.Length (exclusive upper bound)
+                int randomIndex = Random.Range(0, popSounds.Length);
+                AudioClip randomClip = popSounds[randomIndex];
 
-            // Play the chosen random clip
-            AudioSource.PlayClipAtPoint(randomClip, transform.position, 1.0f);
-        }
-        if (popEffect != null)
-        {
-            Instantiate(popEffect, transform.position, Quaternion.identity);
-        }
+                // Play the chosen random clip
+                AudioSource.PlayClipAtPoint(randomClip, transform.position, 1.0f);
+            }
+            if (popEffect != null)
+            {
+                Instantiate(popEffect, transform.position, Quaternion.identity);
+            }
         }
         else
         {
