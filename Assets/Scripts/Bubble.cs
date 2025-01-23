@@ -142,6 +142,10 @@ public class Bubble : MonoBehaviour
     {
         while (transform.position.y > RandomizedThreshold)
         {
+            if (PauseManager.GlobalIsPaused || GameManager.GlobalGameEnded)
+        {
+            break;
+        }
             bubbleType = types[Random.Range(0, types.Length)];
             UpdateSprite();
             yield return new WaitForSeconds(1f); // Change sprite every second
