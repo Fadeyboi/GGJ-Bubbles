@@ -1,14 +1,16 @@
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class PauseManager : MonoBehaviour
 {
-    private bool isPaused = false;
+    private bool isPaused;
     public GameObject pauseText;
     public static bool GlobalIsPaused { get; private set; }
 
     void Start()
     {
+        ResumeGame();
         // Ensure the pause text is disabled at the start
         if (pauseText != null)
         {
@@ -65,7 +67,7 @@ public class PauseManager : MonoBehaviour
         Time.timeScale = 1f; // Resume time
         AudioListener.pause = false; // Resume all audio
         Debug.Log("Game Resumed");
-
+        GlobalIsPaused = false;
         // Hide the pause text
         if (pauseText != null)
         {
@@ -75,6 +77,6 @@ public class PauseManager : MonoBehaviour
 
     void QuitToMainmenu(){
         Debug.Log("Quitting to main menu");
-        //SceneManager.LoadScene("Main Menu");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
     }
 }

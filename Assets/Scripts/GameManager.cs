@@ -1,12 +1,13 @@
 using UnityEngine;
 using TMPro;
 using System;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
     public GameObject gameOverText;
-    public static int Score {get; private set;} = 0;
+    public static int Score {get; private set;}
     private bool gameEnded;
     public TextMeshProUGUI scoreText;
 
@@ -14,9 +15,11 @@ public class GameManager : MonoBehaviour
 
     void Awake()
     {
+        Score = 0;
         gameEnded = false;
         gameOverText.SetActive(false);
         Score = 0;
+        GlobalGameEnded = false;
         if (Instance == null)
         {
             Instance = this;
@@ -62,6 +65,6 @@ public class GameManager : MonoBehaviour
 
     void QuitToMainMenu(){
         Debug.Log("Quitting to main menu");
-        //SceneManager.LoadScene("Main Menu");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
     }
 }

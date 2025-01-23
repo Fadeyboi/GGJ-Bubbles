@@ -3,13 +3,16 @@ using UnityEngine;
 public class GameplayLoop : MonoBehaviour
 {
     public GameObject bubble;
-    float timeToSpawn = 5f;
-    float reduceTimeToSpawn = 0.25f;
-    float spawnTimeLimit = 1.25f;
-    private float nextSpawnTime = 0f;
+    float timeToSpawn;
+    float reduceTimeToSpawn;
+    float spawnTimeLimit;
+    private float nextSpawnTime;
     void Start()
     {
-        
+        timeToSpawn = 5f;
+        reduceTimeToSpawn = 0.25f;
+        spawnTimeLimit = 1.25f;
+        nextSpawnTime = 0f;
     }
 
     void Update()

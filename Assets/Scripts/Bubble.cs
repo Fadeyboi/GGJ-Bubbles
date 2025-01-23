@@ -16,16 +16,16 @@ public class Bubble : MonoBehaviour
     public Sprite bananaSprite;
     int randomColumn;
 
-    public bool isTeleportBubble = false;
-    public bool teleportedBefore = false;
-    public float teleportThreshold = 1f;
-    private bool isFrozen = false;
+    public bool isTeleportBubble;
+    public bool teleportedBefore;
+    public float teleportThreshold;
+    private bool isFrozen;
 
      
 
     private SpriteRenderer spriteRenderer;
-    public bool isRandomizedBubble = false;
-    public float RandomizedThreshold = 1f; 
+    public bool isRandomizedBubble;
+    public float RandomizedThreshold; 
 
 
 
@@ -39,9 +39,15 @@ public class Bubble : MonoBehaviour
 
     void Start()
     {
+        isFrozen = false;
+        isTeleportBubble = false;
+        teleportedBefore = false;
+        teleportThreshold = 1f;
         speedFactor = -1.8f;
         swaySpeed = 5f;
         swayAmplitude = 0.2f;
+        isRandomizedBubble = false;
+        RandomizedThreshold = 1f; 
         SpawnObjectRandomly();
         bubbleType = types[Random.Range(0, types.Length)];
         Debug.Log($"Assigned type: {bubbleType}");
