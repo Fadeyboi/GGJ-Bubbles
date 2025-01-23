@@ -158,8 +158,8 @@ void TeleportToNewColumn()
 
         Debug.Log($"Special bubble teleported from column {currentColumn} to column {newColumn}");
 
-        // Freeze the bubble's movement for 0.3 seconds
-        StartCoroutine(PauseMovement(0.3f));
+        // Freeze the bubble's movement for X seconds
+        StartCoroutine(PauseMovement(0.25f));
     }
 
     IEnumerator PauseMovement(float duration)
